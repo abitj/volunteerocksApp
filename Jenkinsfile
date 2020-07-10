@@ -12,4 +12,14 @@ node {
     stage('Deploy') { 
         // 
     }
+
+
+  post
+  {
+    always
+    {
+      cleanWs()
+    }
+  }
+
 }
