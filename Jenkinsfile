@@ -3,7 +3,8 @@ node {
     git 'https://github.com/aabit/volunteeerocks.git'
     
     stage('Build') { 
-        sh "mvn spring-boot:run"
+        sh "mvn -version"
+        sh "mvn clean install"
     }
     stage('Test') { 
         // 
