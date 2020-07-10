@@ -3,7 +3,7 @@ node {
     git 'https://github.com/aabit/volunteeerocks.git'
     
     stage('Build') { 
-        sh "cd app"
+        sh "mvn spring-boot:run"
     }
     stage('Test') { 
         // 
