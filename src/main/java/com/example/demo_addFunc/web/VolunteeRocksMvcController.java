@@ -15,13 +15,21 @@ import com.example.demo_addFunc.model.VolunteerEntity;
 import com.example.demo_addFunc.service.VolunteerService;
 
 @Controller
-@RequestMapping("/vol")
-public class VolunteerMvcController {
+@RequestMapping("/")
+public class VolunteeRocksMvcController {
     
 	@Autowired
 	VolunteerService service;
 
 	@RequestMapping
+	public String runVolunteeRocks(Model model) 
+	{
+		List<VolunteerEntity> list = service.getAllVolunteers();
+
+		model.addAttribute("volunteers", list);
+		return "volunteeRocks";
+	}
+/*
 	public String getAllVolunteers(Model model) 
 	{
 		List<VolunteerEntity> list = service.getAllVolunteers();
@@ -57,4 +65,5 @@ public class VolunteerMvcController {
 		service.createOrUpdateVolunteer(volunteer);
 		return "redirect:/";
 	}
+*/
 }

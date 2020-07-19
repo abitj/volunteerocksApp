@@ -11,16 +11,36 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.demo_addFunc.exception.RecordNotFoundException;
-import com.example.demo_addFunc.model.VolunteerEntity;
-import com.example.demo_addFunc.service.VolunteerService;
+import com.example.demo_addFunc.model.OpportunityEntity;
+import com.example.demo_addFunc.service.OpportunityService;
 
 @Controller
-@RequestMapping("/vol")
-public class VolunteerMvcController {
+@RequestMapping("/opp")
+public class OpportunityMvcController {
     
 	@Autowired
-	VolunteerService service;
+	OpportunityService oppService;
 
+	@RequestMapping(path = {"/edit", "/edit/{id}"})
+	public String editOpportunityById(Model model, @PathVariable("id") Optional<Long> id) 
+							throws RecordNotFoundException 
+	{
+		if (id.isPresent()) {
+			OpportunityEntity entity = oppService.getOpportunityById(id.get());
+			model.addAttribute("opportunity", entity);
+		} else {
+			model.addAttribute("opportunity", new OpportunityEntity());
+		}
+		return "add-edit-opportunity";
+	}
+	
+	@RequestMapping(path = "/createOpportunity", method = RequestMethod.POST)
+	public String createOrUpdateOpportunity(OpportunityEntity opportunity) 
+	{
+		oppService.createOrUpdateOpportunity(opportunity);
+		return "redirect:/opp";
+	}
+	/*
 	@RequestMapping
 	public String getAllVolunteers(Model model) 
 	{
@@ -30,19 +50,6 @@ public class VolunteerMvcController {
 		return "list-volunteers";
 	}
 
-	@RequestMapping(path = {"/edit", "/edit/{id}"})
-	public String editVolunteerById(Model model, @PathVariable("id") Optional<Long> id) 
-							throws RecordNotFoundException 
-	{
-		if (id.isPresent()) {
-			VolunteerEntity entity = service.getVolunteerById(id.get());
-			model.addAttribute("volunteer", entity);
-		} else {
-			model.addAttribute("volunteer", new VolunteerEntity());
-		}
-		return "add-edit-volunteer";
-	}
-	
 	@RequestMapping(path = "/delete/{id}")
 	public String deleteVolunteerById(Model model, @PathVariable("id") Long id) 
 							throws RecordNotFoundException 
@@ -57,4 +64,14 @@ public class VolunteerMvcController {
 		service.createOrUpdateVolunteer(volunteer);
 		return "redirect:/";
 	}
+*/
+	@RequestMapping
+	public String getAllOpportunities(Model model) 
+	{
+		List<OpportunityEntity> list = oppService.getAllOpportunities();
+
+		model.addAttribute("opportunities", list);
+		return "list-opportunities";
+	}
+
 }
