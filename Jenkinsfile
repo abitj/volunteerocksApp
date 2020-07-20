@@ -1,19 +1,19 @@
-node {  
-    stage 'Clone the project'
-    git 'https://github.com/aabit/volunteeerocks.git'
+pipeline {  
+    agent any
+
+    tools
+    {
+      maven "3.6.3"
+    }
     
-    stage('Build') { 
-        sh "mvn -version"
-        sh "mvn clean install"
+    stages
+    {
+      stage('Build') { 
+          sh "mvn -version"
+          sh "mvn clean install"
+      }
     }
-    stage('Test') { 
-        // 
-    }
-    stage('Deploy') { 
-        // 
-    }
-
-
+  
   post
   {
     always

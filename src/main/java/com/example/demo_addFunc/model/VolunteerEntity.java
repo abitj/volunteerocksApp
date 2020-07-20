@@ -20,7 +20,7 @@ public class VolunteerEntity {
     private String volFullName;
     
     @Column(name="vol_location")
-    private String volLocation;
+    private Integer volLocation;
     
     @Column(name="vol_email", nullable=false, length=200)
     private String volEmail;
@@ -41,11 +41,11 @@ public class VolunteerEntity {
 		this.volFullName = volFullName;
 	}
 
-	public String getVolLocation() {
+	public Integer getVolLocation() {
 		return volLocation;
 	}
 
-	public void setVolLocation(String volLocation) {
+	public void setVolLocation(Integer volLocation) {
 		this.volLocation = volLocation;
 	}
 
