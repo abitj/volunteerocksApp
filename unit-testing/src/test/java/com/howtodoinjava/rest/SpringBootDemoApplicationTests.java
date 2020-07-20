@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
-import com.howtodoinjava.rest.model.Employee;
+import com.howtodoinjava.rest.model.VolunteerEntity;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
@@ -27,19 +27,18 @@ public class SpringBootDemoApplicationTests
     @LocalServerPort
     int randomServerPort;
     
- 
     @Test
-    public void testAddEmployeeSuccess() throws URISyntaxException 
+    public void testAddVolunteerSuccess() throws URISyntaxException 
     {
         RestTemplate restTemplate = new RestTemplate();
-        final String baseUrl = "http://localhost:"+randomServerPort+"/employees/";
+        final String baseUrl = "http://localhost:"+randomServerPort+"/volunteers/";
         URI uri = new URI(baseUrl);
-        Employee employee = new Employee(null, "Adam", "Gilly", "test@email.com");
+        VolunteerEntity volunteer = new VolunteerEntity();
         
         HttpHeaders headers = new HttpHeaders();
         headers.set("X-COM-PERSIST", "true");      
 
-        HttpEntity<Employee> request = new HttpEntity<>(employee, headers);
+        HttpEntity<VolunteerEntity> request = new HttpEntity<>(volunteer, headers);
         
         ResponseEntity<String> result = restTemplate.postForEntity(uri, request, String.class);
         
@@ -48,17 +47,17 @@ public class SpringBootDemoApplicationTests
     }
     
     @Test
-    public void testGetEmployeeListSuccessWithHeaders() throws URISyntaxException 
+    public void testGetVolunteerListSuccessWithHeaders() throws URISyntaxException 
     {
         RestTemplate restTemplate = new RestTemplate();
         
-        final String baseUrl = "http://localhost:"+randomServerPort+"/employees/";
+        final String baseUrl = "http://localhost:"+randomServerPort+"/volunteers/";
         URI uri = new URI(baseUrl);
         
         HttpHeaders headers = new HttpHeaders();
         headers.set("X-COM-LOCATION", "USA");
 
-        HttpEntity<Employee> requestEntity = new HttpEntity<>(null, headers);
+        HttpEntity<VolunteerEntity> requestEntity = new HttpEntity<>(null, headers);
 
         try 
         {
@@ -75,16 +74,16 @@ public class SpringBootDemoApplicationTests
     
  
     @Test
-    public void testAddEmployeeMissingHeader() throws URISyntaxException 
+    public void testAddVolunteerMissingHeader() throws URISyntaxException 
     {
         RestTemplate restTemplate = new RestTemplate();
-        final String baseUrl = "http://localhost:"+randomServerPort+"/employees/";
+        final String baseUrl = "http://localhost:"+randomServerPort+"/volunteers/";
         URI uri = new URI(baseUrl);
-        Employee employee = new Employee(null, "Adam", "Gilly", "test@email.com");
+        VolunteerEntity volunteer = new VolunteerEntity();
         
         HttpHeaders headers = new HttpHeaders();
 
-        HttpEntity<Employee> request = new HttpEntity<>(employee, headers);
+        HttpEntity<VolunteerEntity> request = new HttpEntity<>(volunteer, headers);
         
         try 
         {
