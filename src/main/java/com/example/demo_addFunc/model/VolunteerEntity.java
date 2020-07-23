@@ -11,6 +11,7 @@ import javax.persistence.Table;
 @Table(name="TBL_VOLUNTEERS")
 public class VolunteerEntity {
     
+	
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

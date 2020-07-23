@@ -11,7 +11,6 @@ import javax.persistence.Table;
 @Table(name="TBL_ORGANIZATION")
 public class OrganizationEntity {
     
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,7 +22,7 @@ public class OrganizationEntity {
     private String description;
     
     @Column(name="org_location")
-    private Integer orgLocation;
+    private String orgLocation;
     
     @Column(name="num_volunteers")
     private Integer numVols;
@@ -52,16 +51,16 @@ public class OrganizationEntity {
 		this.description = description;
 	}
 
-	public Integer getOrgLocation() {
-		return volLocation;
+	public String getOrgLocation() {
+		return orgLocation;
 	}
 
-	public void setOrgLocation(Integer orgLocation) {
+	public void setOrgLocation(String orgLocation) {
 		this.orgLocation = orgLocation;
 	}
 
 	public Integer getNumVols() {
-		return volEmail;
+		return numVols;
 	}
 
 	public void setNumVols(Integer numVols) {

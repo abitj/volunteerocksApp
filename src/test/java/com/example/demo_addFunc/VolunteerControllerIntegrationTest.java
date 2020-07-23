@@ -42,7 +42,7 @@ public class VolunteerControllerIntegrationTest {
 
 	}
 
-	@Test
+	/*@Test
 	public void getVolunteerById() {
 		HttpHeaders headers = new HttpHeaders();
 		HttpEntity<String> entity = new HttpEntity<String>(null, headers);
@@ -52,6 +52,7 @@ public class VolunteerControllerIntegrationTest {
 		assert (response.getBody()) != null;
 	}
 
+*/
 	@Test
 	public void testGetVoluteerById() {
 		VolunteerEntity volunteer = restTemplate.getForObject(getRootUrl() + "/volunteers/1", VolunteerEntity.class);
@@ -77,9 +78,6 @@ public class VolunteerControllerIntegrationTest {
 		VolunteerEntity volunteer = restTemplate.getForObject(getRootUrl() + "/volunteers/" + id, VolunteerEntity.class);
 		volunteer.setVolFullName("admin1");
 		volunteer.setVolLocation("admin2");
-		
-	
-		
 
 		restTemplate.put(getRootUrl() + "/volunteers/" + id, volunteer);
 
