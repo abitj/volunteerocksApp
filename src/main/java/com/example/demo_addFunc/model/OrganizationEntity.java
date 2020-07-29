@@ -15,17 +15,17 @@ public class OrganizationEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(name="org_title", nullable=false, length=50)
-    private String orgTitle;
+    @Column(name="title", nullable=false, length=250)
+    private String Title;
 
-    @Column(name="description", nullable=false, length=300)
-    private String description;
+    @Column(name="description", nullable=false, length=250)
+    private String Description;
     
-    @Column(name="org_location")
-    private String orgLocation;
+    @Column(name="location", nullable=false, length=250)
+    private String Location;
     
-    @Column(name="num_volunteers")
-    private Integer numVols;
+    @Column(name="volunteers")
+    private Integer Volunteers;
     
     public Long getId() {
 		return id;
@@ -36,40 +36,40 @@ public class OrganizationEntity {
 	}
 
 	public String getTitle() {
-		return orgTitle;
+		return Title;
 	}
 
-	public void setTitle(String orgTitle) {
-		this.orgTitle = orgTitle;
+	public void setTitle(String Title) {
+		this.Title = Title;
     }
     
     public String getDescription() {
-		return description;
+		return Description;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setDescription(String Description) {
+		this.Description = Description;
 	}
 
-	public String getOrgLocation() {
-		return orgLocation;
+	public String getLocation() {
+		return Location;
 	}
 
-	public void setOrgLocation(String orgLocation) {
-		this.orgLocation = orgLocation;
+	public void setLocation(String Location) {
+		this.Location = Location;
 	}
 
-	public Integer getNumVols() {
-		return numVols;
+	public Integer getVolunteers() {
+		return Volunteers;
 	}
 
-	public void setNumVols(Integer numVols) {
-		this.numVols = numVols;
+	public void setVolunteers(Integer Volunteers) {
+		this.Volunteers = Volunteers;
 	}
 
     @Override
     public String toString() {
-        return "VolunteerEntity [id=" + id + ", org_title=" + orgTitle + ", description=" + description + 
-                ", org_location=" + orgLocation + ", num_volunteers=" + numVols + "]";
+        return "VolunteerEntity [id=" + id + ", title=" + Title + ", description=" + Description + 
+                ", location=" + Location + ", volunteers=" + Volunteers + "]";
     }
 }

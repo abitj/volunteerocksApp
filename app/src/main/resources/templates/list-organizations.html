@@ -16,12 +16,12 @@
     <div class="card-body">
         <div th:switch="${organizations}" class="container my-5">
             <p class="my-5">
-                <a href="/" class="btn btn-primary">
-                <i class="fas fa-user-plus ml-2"> VolunteeRocks </i></a>
+                <a href="/org/edit" class="btn btn-primary">
+                <i class="fas fa-user-plus ml-2"> Add Organization </i></a>
             </p>
             <p class="my-5">
-                <a href="/edit" class="btn btn-primary">
-                <i class="fas fa-user-plus ml-2"> Add Organization </i></a>
+                <a href="/" class="btn btn-primary">
+                <i class="fas fa-user-plus ml-2"> VolunteeRocks </i></a>
             </p>
             <div class="col-md-10">
                 <h2 th:case="null">No record found !!</h2>
@@ -41,15 +41,19 @@
                             <tr th:each="organization : ${organizations}">
                                 <td th:text="${organization.title}"></td>
                                 <td th:text="${organization.description}"></td>
-                                <td th:text="${organization.location}"></td>
-                                <td th:text="${organization.volunteers}"></td>
+                                <td th:text="${organization.loc}"></td>
+                                <td th:text="${organization.vols}"></td>
+                                <!--<td th:text="org_title"></td>
+                                <td th:text="org_description"></td>
+                                <td th:text="org_location"></td>
+                                <td th:text="nuum_volunteers"></td>-->
                                 <td>
-                                    <a th:href="@{/edit/{id}(id=${organization.id})}" class="btn btn-primary">
+                                    <a th:href="@{/org/edit/{id}(id=${organization.id})}" class="btn btn-primary">
                                         <i class="fas fa-user-edit ml-2"></i>
                                     </a>
                                 </td>
                                 <td>
-                                    <a th:href="@{/delete/{id}(id=${organization.id})}" class="btn btn-primary">
+                                    <a th:href="@{/org/delete/{id}(id=${organization.id})}" class="btn btn-primary">
                                         <i class="fas fa-user-times ml-2"></i>
                                     </a>
                                 </td>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>All Organizations</title>
+    <title>All Opportunities</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
@@ -14,14 +14,14 @@
     <div class="container my-2">
     <div class="card">
     <div class="card-body">
-        <div th:switch="${organizations}" class="container my-5">
+        <div th:switch="${opportunities}" class="container my-5">
             <p class="my-5">
                 <a href="/" class="btn btn-primary">
                 <i class="fas fa-user-plus ml-2"> VolunteeRocks </i></a>
             </p>
             <p class="my-5">
-                <a href="/edit" class="btn btn-primary">
-                <i class="fas fa-user-plus ml-2"> Add Organization </i></a>
+                <a href="/opp/edit" class="btn btn-primary">
+                <i class="fas fa-user-plus ml-2"> Add Opportunity </i></a>
             </p>
             <div class="col-md-10">
                 <h2 th:case="null">No record found !!</h2>
@@ -29,27 +29,25 @@
                     <table class="table table-striped table-responsive-md">
                         <thead>
                             <tr>
-                                <th>Title</th>
                                 <th>Description</th>
                                 <th>Location</th>
-                                <th>Volunteers Needed</th>
+                                <th>Number Needed</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr th:each="organization : ${organizations}">
-                                <td th:text="${organization.title}"></td>
-                                <td th:text="${organization.description}"></td>
-                                <td th:text="${organization.location}"></td>
-                                <td th:text="${organization.volunteers}"></td>
+                            <tr th:each="opportunity : ${opportunities}">
+                                <td th:text="${opportunity.oppDescription}"></td>
+                                <td th:text="${opportunity.oppLocation}"></td>
+                                <td th:text="${opportunity.oppNumberNeeded}"></td>
                                 <td>
-                                    <a th:href="@{/edit/{id}(id=${organization.id})}" class="btn btn-primary">
+                                    <a th:href="@{/opp/edit/{id}(id=${opportunity.id})}" class="btn btn-primary">
                                         <i class="fas fa-user-edit ml-2"></i>
                                     </a>
                                 </td>
                                 <td>
-                                    <a th:href="@{/delete/{id}(id=${organization.id})}" class="btn btn-primary">
+                                    <a th:href="@{/opp/delete/{id}(id=${opportunity.id})}" class="btn btn-primary">
                                         <i class="fas fa-user-times ml-2"></i>
                                     </a>
                                 </td>
