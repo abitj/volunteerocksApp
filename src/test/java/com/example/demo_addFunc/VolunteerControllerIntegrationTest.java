@@ -42,17 +42,6 @@ public class VolunteerControllerIntegrationTest {
 
 	}
 
-	/*@Test
-	public void getVolunteerById() {
-		HttpHeaders headers = new HttpHeaders();
-		HttpEntity<String> entity = new HttpEntity<String>(null, headers);
-
-		ResponseEntity<String> response = restTemplate.exchange(getRootUrl() + "/volunteers",
-				HttpMethod.GET, entity, String.class);
-		assert (response.getBody()) != null;
-	}
-
-*/
 	@Test
 	public void testGetVoluteerById() {
 		VolunteerEntity volunteer = restTemplate.getForObject(getRootUrl() + "/volunteers/1", VolunteerEntity.class);
