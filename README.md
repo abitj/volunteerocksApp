@@ -13,7 +13,13 @@ Volunteers can search opportunities by zip code. They will then be able to view 
 **Release Notes M2(what is currently working):**
         Currently volunteers can sign up using their name, location, and email address. 
         A volunteer can also be edited or deleted.
-        Test cases and test scripts are in progress and will be included in next Milestone.
+        Test cases and test scripts are working for Volunteer classes.
+        
+**Release Notes M3(what is currently working):**
+        Currently volunteers can sign up using their name, location, and email address. 
+        A volunteer can also be edited or deleted.
+        Test cases and test scripts are working for Volunteer classes.
+        Test cases and test scripts are working for Organization classes.
 
 
 **How to run VolunteeRocks App:**
