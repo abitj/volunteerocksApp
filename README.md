@@ -23,7 +23,7 @@ Volunteers can search opportunities by zip code. They will then be able to view 
 
 
 **How to run VolunteeRocks App:**
-* Go to addFunc directory 
+* Go to app directory 
 * Build the server by running the command < mvn spring-boot:run >
 * Go to a web browser and type in < localhost:8080 >
 
