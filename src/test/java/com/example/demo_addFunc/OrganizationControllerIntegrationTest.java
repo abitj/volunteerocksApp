@@ -19,6 +19,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.HttpClientErrorException;
 
+import com.example.demo_addFunc.model.OpportunityEntity;
 import com.example.demo_addFunc.model.OrganizationEntity;
 import com.example.demo_addFunc.service.OrganizationService;
 
@@ -42,17 +43,7 @@ public class OrganizationControllerIntegrationTest {
 
 	}
 
-	/*@Test
-	public void getOrganizationById() {
-		HttpHeaders headers = new HttpHeaders();
-		HttpEntity<String> entity = new HttpEntity<String>(null, headers);
-
-		ResponseEntity<String> response = restTemplate.exchange(getRootUrl() + "/Organizations",
-				HttpMethod.GET, entity, String.class);
-		assert (response.getBody()) != null;
-	}
-
-*/
+	
 	@Test
 	public void testGetOrganizationById() {
 		OrganizationEntity organization = restTemplate.getForObject(getRootUrl() + "/Organizations/1", OrganizationEntity.class);
@@ -98,6 +89,59 @@ public class OrganizationControllerIntegrationTest {
 		} catch (final HttpClientErrorException e) {
 			//assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
 		}
+	}
+		
+		
+		@Test
+		public void testGetOpportunityById() {
+			OpportunityEntity opportunity = restTemplate.getForObject(getRootUrl() + "/Opportunitys/1", OpportunityEntity.class);
+			System.out.println(opportunity.getOppDescription());
+			assert (opportunity) != null;
+		}
+
+		@Test
+		public void testCreateOpportunity() {
+			OpportunityEntity Opportunity = new OpportunityEntity();
+			Opportunity.setOppDescription("description");
+			Opportunity.setOppLocation("location");
+			Opportunity.setOppNumberNeeded(4321);
+
+			ResponseEntity<OpportunityEntity> postResponse = restTemplate.postForEntity(getRootUrl() + "/Opportunities", Opportunity, OpportunityEntity.class);
+			assert (postResponse) != null;
+			assert (postResponse.getBody()) != null;
+		}
+
+		@Test
+		public void testUpdateOpportunity() {
+			int id = 1;
+			OpportunityEntity opportunity = restTemplate.getForObject(getRootUrl() + "/Opportunitys/" + id, OpportunityEntity.class);
+			opportunity.setOppDescription("new description");
+			opportunity.setOppLocation("new location");
+			opportunity.setOppNumberNeeded(1234);
+
+			restTemplate.put(getRootUrl() + "/Opportunitys/" + id, opportunity);
+
+			OpportunityEntity updatedOpportunity = restTemplate.getForObject(getRootUrl() + "/Opportunities/" + id, OpportunityEntity.class);
+			assert (updatedOpportunity) != null;
+		}
+
+		@Test
+		public void testDeleteOpportunityById() {
+			int id = 2;
+			OpportunityEntity opportunity = restTemplate.getForObject(getRootUrl() + "/Opportunities/" + id, OpportunityEntity.class);
+			assert (opportunity) != null;
+
+			restTemplate.delete(getRootUrl() + "/Opportunitys/" + id);
+
+			try {
+				opportunity = restTemplate.getForObject(getRootUrl() + "/Opportunitiess/" + id, OpportunityEntity.class);
+			} catch (final HttpClientErrorException e) {
+				//assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
+			}
+		
+		
+		
+		
 	}
 }
 
