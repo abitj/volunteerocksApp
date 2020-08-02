@@ -16,22 +16,22 @@
         <div class="card">
             <div class="card-body">
                 <div class="col-md-10">
-                    <form action="#" th:action="@{/createVolunteer}" th:object="${volunteer}" method="post">
+                    <form action="#" th:action="@{/vol/createVolunteer}" th:object="${volunteer}" method="post">
                         <div class="row">
                             <div class="form-group col-md-8">
                                 <label for="name" class="col-form-label">Full Name</label> 
-                                <input type="text" th:field="*{volFullName}" class="form-control" 
-                                            id="volFullName" placeholder="Full Name" />
+                                <input type="text" th:field="*{FullName}" class="form-control" 
+                                            id="FullName" placeholder="Full Name" />
                             </div>
                             <div class="form-group col-md-8">
                                 <label for="name" class="col-form-label">Location</label> 
-                                <input type="text" th:field="*{volLocation}" class="form-control" 
-                                            id="volLocation" placeholder="Location" />
+                                <input type="text" th:field="*{Location}" class="form-control" 
+                                            id="Location" placeholder="Location" />
                             </div>
                             <div class="form-group col-md-8">
                                 <label for="email" class="col-form-label">Email</label> 
-                                <input type="text" th:field="*{volEmail}" class="form-control" 
-                                            id="volEemail" placeholder="Email Id" />
+                                <input type="text" th:field="*{Email}" class="form-control" 
+                                            id="Email" placeholder="Email Id" />
                             </div>
 
                             <div class="col-md-6">

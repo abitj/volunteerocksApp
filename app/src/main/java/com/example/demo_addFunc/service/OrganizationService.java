@@ -57,8 +57,8 @@ public class OrganizationService {
 				OrganizationEntity newEntity = organization.get();
                 newEntity.setTitle(entity.getTitle());
                 newEntity.setDescription(entity.getDescription());
-				newEntity.setOrgLocation(entity.getOrgLocation());
-				newEntity.setNumVols(entity.getNumVols());
+				newEntity.setLocation(entity.getLocation());
+				newEntity.setVolunteers(entity.getVolunteers());
 
 				newEntity = repository.save(newEntity);
 				

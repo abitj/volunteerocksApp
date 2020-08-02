@@ -16,14 +16,14 @@ public class OpportunityEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(name="opp_description", nullable=false, length=200)
-    private String oppDescription;
+    @Column(name="description", nullable=false, length=200)
+    private String Description;
     
-    @Column(name="opp_location")
-    private String oppLocation;
+    @Column(name="location")
+    private String Location;
     
-    @Column(name="opp_number_needed")
-    private int oppNumberNeeded;
+    @Column(name="number_needed")
+    private int NumberNeeded;
     
     public Long getId() {
 		return id;
@@ -33,33 +33,33 @@ public class OpportunityEntity {
 		this.id = id;
 	}
 
-	public String getOppDescription() {
-		return oppDescription;
+	public String getDescription() {
+		return Description;
 	}
 
-	public void setOppDescription(String oppDescription) {
-		this.oppDescription = oppDescription;
+	public void setDescription(String Description) {
+		this.Description = Description;
 	}
 
-	public String getOppLocation() {
-		return oppLocation;
+	public String getLocation() {
+		return Location;
 	}
 
-	public void setOppLocation(String oppLocation) {
-		this.oppLocation = oppLocation;
+	public void setLocation(String Location) {
+		this.Location = Location;
 	}
 
-	public int getOppNumberNeeded() {
-		return oppNumberNeeded;
+	public int getNumberNeeded() {
+		return NumberNeeded;
 	}
 
-	public void setOppNumberNeeded(int oppNumberNeeded) {
-		this.oppNumberNeeded = oppNumberNeeded;
+	public void setNumberNeeded(int NumberNeeded) {
+		this.NumberNeeded = NumberNeeded;
 	}
 
     @Override
     public String toString() {
-        return "OpportunityEntity [id=" + id + ", oppDescription=" + oppDescription + 
-                ", oppLocation=" + oppLocation + ", oppNumberNeeded=" + oppNumberNeeded + "]";
+        return "OpportunityEntity [id=" + id + ", Description=" + Description + 
+                ", Location=" + Location + ", NumberNeeded=" + NumberNeeded + "]";
     }
 }

@@ -55,6 +55,6 @@ public class OrganizationMvcController {
 	public String createOrUpdateOrganization(OrganizationEntity organization) 
 	{
 		service.createOrUpdateOrganization(organization);
-		return "redirect:/";
+		return "redirect:/org";
 	}
 }

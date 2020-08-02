@@ -16,7 +16,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="col-md-10">
-                    <form action="#" th:action="@{/createOrganization}" th:object="${organization}" method="post">
+                    <form action="#" th:action="@{/org/createOrganization}" th:object="${organization}" method="post">
                         <div class="row">
                             <div class="form-group col-md-8">
                                 <label for="title" class="col-form-label">Title</label> 
@@ -29,14 +29,14 @@
                                             id="description" placeholder="Description of Opportunity" />
                             </div>
                             <div class="form-group col-md-8">
-                                <label for="loc" class="col-form-label">Location</label> 
-                                <input type="text" th:field="*{loc}" class="form-control" 
-                                            id="loc" placeholder="00000" />
+                                <label for="location" class="col-form-label">Location</label> 
+                                <input type="text" th:field="*{location}" class="form-control" 
+                                            id="location" placeholder="00000" />
                             </div>
                             <div class="form-group col-md-8">
-                                <label for="vols" class="col-form-label">Volunteers Needed</label> 
-                                <input type="text" th:field="*{vols}" class="form-control" 
-                                            id="vols" placeholder="0" />
+                                <label for="volunteers" class="col-form-label">Volunteers Needed</label> 
+                                <input type="text" th:field="*{volunteers}" class="form-control" 
+                                            id="volunteers" placeholder="0" />
                             </div>
 
                             <div class="col-md-6">

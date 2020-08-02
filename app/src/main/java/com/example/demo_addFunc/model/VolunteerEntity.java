@@ -16,14 +16,14 @@ public class VolunteerEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @Column(name="vol_full_name")
-    private String volFullName;
+    @Column(name="full_name")
+    private String FullName;
     
-    @Column(name="vol_location")
-    private String volLocation;
+    @Column(name="location")
+    private String Location;
     
-    @Column(name="vol_email", nullable=false, length=200)
-    private String volEmail;
+    @Column(name="email", nullable=false, length=200)
+    private String Email;
     
     public Long getId() {
 		return id;
@@ -33,33 +33,33 @@ public class VolunteerEntity {
 		this.id = id;
 	}
 
-	public String getVolFullName() {
-		return volFullName;
+	public String getFullName() {
+		return FullName;
 	}
 
-	public void setVolFullName(String volFullName) {
-		this.volFullName = volFullName;
+	public void setFullName(String FullName) {
+		this.FullName = FullName;
 	}
 
-	public String getVolLocation() {
-		return volLocation;
+	public String getLocation() {
+		return Location;
 	}
 
-	public void setVolLocation(String volLocation) {
-		this.volLocation = volLocation;
+	public void setLocation(String Location) {
+		this.Location = Location;
 	}
 
-	public String getVolEmail() {
-		return volEmail;
+	public String getEmail() {
+		return Email;
 	}
 
-	public void setVolEmail(String volEmail) {
-		this.volEmail = volEmail;
+	public void setEmail(String Email) {
+		this.Email = Email;
 	}
 
     @Override
     public String toString() {
-        return "VolunteerEntity [id=" + id + ", volFullname=" + volFullName + 
-                ", volLocation=" + volLocation + ", volEmail=" + volEmail   + "]";
+        return "VolunteerEntity [id=" + id + ", Fullname=" + FullName + 
+                ", Location=" + Location + ", Email=" + Email   + "]";
     }
 }

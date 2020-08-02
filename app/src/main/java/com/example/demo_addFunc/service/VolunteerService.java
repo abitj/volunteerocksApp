@@ -55,9 +55,9 @@ public class VolunteerService {
 			if(volunteer.isPresent()) 
 			{
 				VolunteerEntity newEntity = volunteer.get();
-				newEntity.setVolEmail(entity.getVolEmail());
-				newEntity.setVolFullName(entity.getVolFullName());
-				newEntity.setVolLocation(entity.getVolLocation());
+				newEntity.setEmail(entity.getEmail());
+				newEntity.setFullName(entity.getFullName());
+				newEntity.setLocation(entity.getLocation());
 
 				newEntity = repository.save(newEntity);
 				

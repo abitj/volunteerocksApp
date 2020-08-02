@@ -55,9 +55,9 @@ public class OpportunityService {
 			if(opportunity.isPresent()) 
 			{
 				OpportunityEntity newEntity = opportunity.get();
-				newEntity.setOppDescription(entity.getOppDescription());
-				newEntity.setOppNumberNeeded(entity.getOppNumberNeeded());
-				newEntity.setOppLocation(entity.getOppLocation());
+				newEntity.setDescription(entity.getDescription());
+				newEntity.setNumberNeeded(entity.getNumberNeeded());
+				newEntity.setLocation(entity.getLocation());
 
 				newEntity = repository.save(newEntity);
 				

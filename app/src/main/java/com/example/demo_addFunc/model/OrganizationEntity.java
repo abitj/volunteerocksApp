@@ -16,16 +16,16 @@ public class OrganizationEntity {
     private Long id;
     
     @Column(name="title", nullable=false, length=250)
-    private String orgTitle;
+    private String Title;
 
     @Column(name="description", nullable=false, length=250)
-    private String description;
+    private String Description;
     
-    @Column(name="loc", nullable=false, length=250)
-    private String orgLocation;
+    @Column(name="location", nullable=false, length=250)
+    private String Location;
     
-    @Column(name="vols")
-    private String numVols;
+    @Column(name="volunteers")
+    private int Volunteers;
     
     public Long getId() {
 		return id;
@@ -36,40 +36,40 @@ public class OrganizationEntity {
 	}
 
 	public String getTitle() {
-		return orgTitle;
+		return Title;
 	}
 
-	public void setTitle(String orgTitle) {
-		this.orgTitle = orgTitle;
+	public void setTitle(String Title) {
+		this.Title = Title;
     }
     
     public String getDescription() {
-		return description;
+		return Description;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setDescription(String Description) {
+		this.Description = Description;
 	}
 
-	public String getOrgLocation() {
-		return orgLocation;
+	public String getLocation() {
+		return Location;
 	}
 
-	public void setOrgLocation(String orgLocation) {
-		this.orgLocation = orgLocation;
+	public void setLocation(String Location) {
+		this.Location = Location;
 	}
 
-	public String getNumVols() {
-		return numVols;
+	public int getVolunteers() {
+		return Volunteers;
 	}
 
-	public void setNumVols(String numVols) {
-		this.numVols = numVols;
+	public void setVolunteers(int Volunteers) {
+		this.Volunteers = Volunteers;
 	}
 
     @Override
     public String toString() {
-        return "VolunteerEntity [id=" + id + ", title=" + orgTitle + ", description=" + description + 
-                ", location=" + orgLocation + ", volunteers=" + numVols + "]";
+        return "VolunteerEntity [id=" + id + ", title=" + Title + ", description=" + Description + 
+                ", location=" + Location + ", volunteers=" + Volunteers + "]";
     }
 }

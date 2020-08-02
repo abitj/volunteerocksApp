@@ -38,9 +38,9 @@
                         </thead>
                         <tbody>
                             <tr th:each="opportunity : ${opportunities}">
-                                <td th:text="${opportunity.oppDescription}"></td>
-                                <td th:text="${opportunity.oppLocation}"></td>
-                                <td th:text="${opportunity.oppNumberNeeded}"></td>
+                                <td th:text="${opportunity.Description}"></td>
+                                <td th:text="${opportunity.Location}"></td>
+                                <td th:text="${opportunity.NumberNeeded}"></td>
                                 <td>
                                     <a th:href="@{/opp/edit/{id}(id=${opportunity.id})}" class="btn btn-primary">
                                         <i class="fas fa-user-edit ml-2"></i>

@@ -15,13 +15,21 @@ import com.example.demo_addFunc.model.VolunteerEntity;
 import com.example.demo_addFunc.service.VolunteerService;
 
 @Controller
-@RequestMapping("/vol")
-public class VolunteerMvcController {
+@RequestMapping("/")
+public class VolunteeRocksMvcController {
     
 	@Autowired
 	VolunteerService service;
 
 	@RequestMapping
+	public String runVolunteeRocks(Model model) 
+	{
+		List<VolunteerEntity> list = service.getAllVolunteers();
+
+		model.addAttribute("volunteers", list);
+		return "volunteeRocks";
+	}
+/*
 	public String getAllVolunteers(Model model) 
 	{
 		List<VolunteerEntity> list = service.getAllVolunteers();
@@ -30,7 +38,7 @@ public class VolunteerMvcController {
 		return "list-volunteers";
 	}
 
-	@RequestMapping(path = {"/vol/edit", "/vol/edit/{id}"})
+	@RequestMapping(path = {"/edit", "/edit/{id}"})
 	public String editVolunteerById(Model model, @PathVariable("id") Optional<Long> id) 
 							throws RecordNotFoundException 
 	{
@@ -43,18 +51,19 @@ public class VolunteerMvcController {
 		return "add-edit-volunteer";
 	}
 	
-	@RequestMapping(path = "/vol/delete/{id}")
+	@RequestMapping(path = "/delete/{id}")
 	public String deleteVolunteerById(Model model, @PathVariable("id") Long id) 
 							throws RecordNotFoundException 
 	{
 		service.deleteVolunteerById(id);
-		return "redirect:/vol";
+		return "redirect:/";
 	}
 
-	@RequestMapping(path = "/vol/createVolunteer", method = RequestMethod.POST)
+	@RequestMapping(path = "/createVolunteer", method = RequestMethod.POST)
 	public String createOrUpdateVolunteer(VolunteerEntity volunteer) 
 	{
 		service.createOrUpdateVolunteer(volunteer);
-		return "redirect:/vol";
+		return "redirect:/";
 	}
+*/
 }
