@@ -40,6 +40,16 @@ public class OpportunityService {
 		}
 	}
 	
+	public OpportunityEntity signUp(OpportunityEntity entity)
+	{
+		if(entity.getId()  == null) 
+		{
+			entity = repository.save(entity);
+			return entity;
+		} 
+		return entity;
+	}
+	
 	public OpportunityEntity createOrUpdateOpportunity(OpportunityEntity entity) 
 	{
 		if(entity.getId()  == null) 

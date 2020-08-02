@@ -30,7 +30,7 @@ public class VolunteerMvcController {
 		return "list-volunteers";
 	}
 
-	@RequestMapping(path = {"/vol/edit", "/vol/edit/{id}"})
+	@RequestMapping(path = {"/edit", "/vol/edit/{id}"})
 	public String editVolunteerById(Model model, @PathVariable("id") Optional<Long> id) 
 							throws RecordNotFoundException 
 	{
@@ -43,7 +43,7 @@ public class VolunteerMvcController {
 		return "add-edit-volunteer";
 	}
 	
-	@RequestMapping(path = "/vol/delete/{id}")
+	@RequestMapping(path = "/delete/{id}")
 	public String deleteVolunteerById(Model model, @PathVariable("id") Long id) 
 							throws RecordNotFoundException 
 	{
@@ -51,10 +51,10 @@ public class VolunteerMvcController {
 		return "redirect:/vol";
 	}
 
-	@RequestMapping(path = "/vol/createVolunteer", method = RequestMethod.POST)
+	@RequestMapping(path = "/createVolunteer", method = RequestMethod.POST)
 	public String createOrUpdateVolunteer(VolunteerEntity volunteer) 
 	{
 		service.createOrUpdateVolunteer(volunteer);
-		return "redirect:/vol";
+		return "redirect:/";
 	}
 }

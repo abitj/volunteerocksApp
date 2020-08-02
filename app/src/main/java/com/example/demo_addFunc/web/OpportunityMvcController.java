@@ -19,14 +19,14 @@ import com.example.demo_addFunc.service.OpportunityService;
 public class OpportunityMvcController {
     
 	@Autowired
-	OpportunityService oppService;
+	OpportunityService service;
 
 	@RequestMapping(path = {"/edit", "/edit/{id}"})
 	public String editOpportunityById(Model model, @PathVariable("id") Optional<Long> id) 
 							throws RecordNotFoundException 
 	{
 		if (id.isPresent()) {
-			OpportunityEntity entity = oppService.getOpportunityById(id.get());
+			OpportunityEntity entity = service.getOpportunityById(id.get());
 			model.addAttribute("opportunity", entity);
 		} else {
 			model.addAttribute("opportunity", new OpportunityEntity());
@@ -37,41 +37,31 @@ public class OpportunityMvcController {
 	@RequestMapping(path = "/createOpportunity", method = RequestMethod.POST)
 	public String createOrUpdateOpportunity(OpportunityEntity opportunity) 
 	{
-		oppService.createOrUpdateOpportunity(opportunity);
+		service.createOrUpdateOpportunity(opportunity);
 		return "redirect:/opp";
-	}
-	/*
-	@RequestMapping
-	public String getAllVolunteers(Model model) 
-	{
-		List<VolunteerEntity> list = service.getAllVolunteers();
-
-		model.addAttribute("volunteers", list);
-		return "list-volunteers";
 	}
 
 	@RequestMapping(path = "/delete/{id}")
-	public String deleteVolunteerById(Model model, @PathVariable("id") Long id) 
+	public String deleteOpportunityById(Model model, @PathVariable("id") Long id) 
 							throws RecordNotFoundException 
 	{
-		service.deleteVolunteerById(id);
-		return "redirect:/";
+		service.deleteOpportunityById(id);
+		return "redirect:/opp";
 	}
 
-	@RequestMapping(path = "/createVolunteer", method = RequestMethod.POST)
-	public String createOrUpdateVolunteer(VolunteerEntity volunteer) 
-	{
-		service.createOrUpdateVolunteer(volunteer);
-		return "redirect:/";
-	}
-*/
 	@RequestMapping
 	public String getAllOpportunities(Model model) 
 	{
-		List<OpportunityEntity> list = oppService.getAllOpportunities();
+		List<OpportunityEntity> list = service.getAllOpportunities();
 
 		model.addAttribute("opportunities", list);
 		return "list-opportunities";
+	}
+
+	@RequestMapping(path = "/signUp", method = RequestMethod.POST)
+	public String signUp(OpportunityEntity opportunity) 
+	{
+		return "redirect:/vol";
 	}
 
 }
