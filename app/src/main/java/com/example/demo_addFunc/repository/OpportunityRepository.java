@@ -1,3 +1,6 @@
+/**
+ * Opportunity repository, extends CrudRepository
+ */
 package com.example.demo_addFunc.repository;
 
 import org.springframework.data.repository.CrudRepository;

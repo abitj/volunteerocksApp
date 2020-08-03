@@ -1,3 +1,6 @@
+/**
+ * Opportunity controller logic
+ */
 package com.example.demo_addFunc.web;
 
 import java.util.List;
@@ -21,6 +24,16 @@ public class OpportunityMvcController {
 	@Autowired
 	OpportunityService service;
 
+	/**
+	 * Edits the opportunity entity
+	 * <p>
+	 * Selects the opportunity by id then presents the values for editing
+	 * <p>
+	 * @param model
+	 * @param id
+	 * @return add-edit-opportunity html resource template
+	 * @throws RecordNotFoundException
+	 */
 	@RequestMapping(path = {"/edit", "/edit/{id}"})
 	public String editOpportunityById(Model model, @PathVariable("id") Optional<Long> id) 
 							throws RecordNotFoundException 
@@ -34,6 +47,12 @@ public class OpportunityMvcController {
 		return "add-edit-opportunity";
 	}
 	
+	/**
+	 * Create a new opportunity
+	 * <p>
+	 * @param opportunity
+	 * @return Redirecs to list of opportunities
+	 */
 	@RequestMapping(path = "/createOpportunity", method = RequestMethod.POST)
 	public String createOrUpdateOpportunity(OpportunityEntity opportunity) 
 	{
@@ -41,6 +60,14 @@ public class OpportunityMvcController {
 		return "redirect:/opp";
 	}
 
+	/**
+	 * Delete the opportunity by id
+	 * <p>
+	 * @param model
+	 * @param id
+	 * @return Redirects to list of opportunities
+	 * @throws RecordNotFoundException
+	 */
 	@RequestMapping(path = "/delete/{id}")
 	public String deleteOpportunityById(Model model, @PathVariable("id") Long id) 
 							throws RecordNotFoundException 
@@ -49,6 +76,12 @@ public class OpportunityMvcController {
 		return "redirect:/opp";
 	}
 
+	/**
+	 * Lists all current opporunity records
+	 * <p>
+	 * @param model
+	 * @return list-opportunities html resource template
+	 */
 	@RequestMapping
 	public String getAllOpportunities(Model model) 
 	{
@@ -58,6 +91,12 @@ public class OpportunityMvcController {
 		return "list-opportunities";
 	}
 
+	/**
+	 * Allow a volunter to sign up for an opportunity
+	 * <p>
+	 * @param opportunity
+	 * @return Redirect to volunteer info entry page
+	 */
 	@RequestMapping(path = "/signUp", method = RequestMethod.POST)
 	public String signUp(OpportunityEntity opportunity) 
 	{
