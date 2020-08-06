@@ -16,12 +16,12 @@
     <div class="card-body">
         <div th:switch="${opportunities}" class="container my-5">
             <p class="my-5">
-                <a href="/opp/edit" class="btn btn-primary">
-                <i class="fas fa-user-plus ml-2"> Add Opportunity </i></a>
+                <a href="/" class="btn btn-primary">
+                <i class="fas fa-user-plus ml-2"> Find Opportunity </i></a>
             </p>
             <p class="my-5">
-                <a href="/" class="btn btn-primary">
-                <i class="fas fa-user-plus ml-2"> VolunteeRocks </i></a>
+                <a href="/opp/edit" class="btn btn-primary">
+                <i class="fas fa-user-plus ml-2"> Create Opportunity </i></a>
             </p>
             <div class="col-md-10">
                 <h2 th:case="null">No record found !!</h2>

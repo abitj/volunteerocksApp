@@ -14,17 +14,17 @@
     <div class="container my-2">
     <div class="card">
     <div class="card-body">
-        <div>
+       <!-- <div>
             <img src="./vr.jpeg" height="207" width="207" alt="VR" title="VR Logo"
             th:src="@{./vr.jpeg}" th:alt-title="#{title.application}"/>
-        </div>
+        </div> -->
         <div th:switch="${volunteers}" class="container my-5">
             <p class="my-5">
                 <!--<a href="/edit" class="btn btn-primary">-->
                 <i class="fas ml-2"> Find Opportunity </i>
             </p>
             <div class="form-group col-md-8">
-                <label for="zip" class="col-form-label">ZIP</label> 
+                <!-- <label for="zip" class="col-form-label">ZIP</label>  -->
                 <input type="text" class="form-control" 
                             id="zip" placeholder="ZIP" />
             </div>

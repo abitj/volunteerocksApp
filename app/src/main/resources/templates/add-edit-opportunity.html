@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Add Opportuntiy</title>
+    <title>Create Opportuntiy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
@@ -12,26 +12,26 @@
 
 <body>
     <div class="container my-5">
-        <h3> Add Opportuntiy</h3>
+        <h3> Create Opportuntiy</h3>
         <div class="card">
             <div class="card-body">
                 <div class="col-md-10">
                     <form action="#" th:action="@{/opp/createOpportunity}" th:object="${opportunity}" method="post">
                         <div class="row">
                             <div class="form-group col-md-8">
-                                <label for="name" class="col-form-label">Description</label> 
+                               <!-- <label for="name" class="col-form-label">Description</label> -->
                                 <input type="text" th:field="*{Description}" class="form-control" 
                                             id="Description" placeholder="Description" />
                             </div>
                             <div class="form-group col-md-8">
-                                <label for="name" class="col-form-label">Location</label> 
+                               <!-- <label for="name" class="col-form-label">Location</label> -->
                                 <input type="text" th:field="*{Location}" class="form-control" 
                                             id="Location" placeholder="Location" />
                             </div>
                             <div class="form-group col-md-8">
-                                <label for="email" class="col-form-label">Number Needed</label> 
+                               <label for="email" class="col-form-label">Number Needed</label>
                                 <input type="text" th:field="*{NumberNeeded}" class="form-control" 
-                                            id="NumberNeeded" placeholder="Number Needed" />
+                                            id="Number Needed" placeholder="Number Needed" />
                             </div>
 
                             <div class="col-md-6">
