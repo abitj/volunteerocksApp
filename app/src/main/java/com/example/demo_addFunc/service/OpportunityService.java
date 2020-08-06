@@ -1,3 +1,6 @@
+/**
+ * Opportunity service member implementations
+ */
 package com.example.demo_addFunc.service;
 
 import java.util.ArrayList;
@@ -38,6 +41,16 @@ public class OpportunityService {
 		} else {
 			throw new RecordNotFoundException("No opportunity record exist for given id");
 		}
+	}
+	
+	public OpportunityEntity signUp(OpportunityEntity entity)
+	{
+		if(entity.getId()  == null) 
+		{
+			entity = repository.save(entity);
+			return entity;
+		} 
+		return entity;
 	}
 	
 	public OpportunityEntity createOrUpdateOpportunity(OpportunityEntity entity) 

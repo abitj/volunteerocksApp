@@ -16,12 +16,12 @@
     <div class="card-body">
         <div th:switch="${opportunities}" class="container my-5">
             <p class="my-5">
-                <a href="/opp/edit" class="btn btn-primary">
-                <i class="fas fa-user-plus ml-2"> Add Opportunity </i></a>
+                <a href="/" class="btn btn-primary">
+                <i class="fas fa-user-plus ml-2"> Find Opportunity </i></a>
             </p>
             <p class="my-5">
-                <a href="/" class="btn btn-primary">
-                <i class="fas fa-user-plus ml-2"> VolunteeRocks </i></a>
+                <a href="/opp/edit" class="btn btn-primary">
+                <i class="fas fa-user-plus ml-2"> Create Opportunity </i></a>
             </p>
             <div class="col-md-10">
                 <h2 th:case="null">No record found !!</h2>
@@ -32,6 +32,7 @@
                                 <th>Description</th>
                                 <th>Location</th>
                                 <th>Number Needed</th>
+                                <th>Sign-Up</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -41,6 +42,12 @@
                                 <td th:text="${opportunity.Description}"></td>
                                 <td th:text="${opportunity.Location}"></td>
                                 <td th:text="${opportunity.NumberNeeded}"></td>
+                                <td>
+                                    <!--<a th:href="@{/vol/edit/{id}(id=${opportunity.id})}" class="btn btn-primary">-->
+                                    <a th:href="@{/vol/edit}" class="btn btn-primary">
+                                        <i class="fas fa-calendar-check ml-2"></i>
+                                    </a>
+                                </td>
                                 <td>
                                     <a th:href="@{/opp/edit/{id}(id=${opportunity.id})}" class="btn btn-primary">
                                         <i class="fas fa-user-edit ml-2"></i>

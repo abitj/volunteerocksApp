@@ -1,3 +1,6 @@
+/**
+ * Implementation of the OPPORTUNITIES table
+ */
 package com.example.demo_addFunc.model;
 
 import javax.persistence.Column;
@@ -24,7 +27,11 @@ public class OpportunityEntity {
     
     @Column(name="number_needed")
     private int NumberNeeded;
-    
+	
+	/**
+	 * Auto-generated value
+	 * 
+	 */
     public Long getId() {
 		return id;
 	}
@@ -33,6 +40,10 @@ public class OpportunityEntity {
 		this.id = id;
 	}
 
+	/**
+	 * Describes the opportunity
+	 * 
+	 */
 	public String getDescription() {
 		return Description;
 	}
@@ -41,6 +52,10 @@ public class OpportunityEntity {
 		this.Description = Description;
 	}
 
+	/**
+	 * Defines where the volunteering opportunity is located
+	 * 
+	 */
 	public String getLocation() {
 		return Location;
 	}
@@ -49,6 +64,10 @@ public class OpportunityEntity {
 		this.Location = Location;
 	}
 
+	/**
+	 * Defines the number of volunteers requested
+	 * 
+	 */
 	public int getNumberNeeded() {
 		return NumberNeeded;
 	}

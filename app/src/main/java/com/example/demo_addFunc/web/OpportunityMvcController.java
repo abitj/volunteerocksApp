@@ -1,3 +1,6 @@
+/**
+ * Opportunity controller logic
+ */
 package com.example.demo_addFunc.web;
 
 import java.util.List;
@@ -19,14 +22,24 @@ import com.example.demo_addFunc.service.OpportunityService;
 public class OpportunityMvcController {
     
 	@Autowired
-	OpportunityService oppService;
+	OpportunityService service;
 
+	/**
+	 * Edits the opportunity entity
+	 * <p>
+	 * Selects the opportunity by id then presents the values for editing
+	 * <p>
+	 * @param model
+	 * @param id
+	 * @return add-edit-opportunity html resource template
+	 * @throws RecordNotFoundException
+	 */
 	@RequestMapping(path = {"/edit", "/edit/{id}"})
 	public String editOpportunityById(Model model, @PathVariable("id") Optional<Long> id) 
 							throws RecordNotFoundException 
 	{
 		if (id.isPresent()) {
-			OpportunityEntity entity = oppService.getOpportunityById(id.get());
+			OpportunityEntity entity = service.getOpportunityById(id.get());
 			model.addAttribute("opportunity", entity);
 		} else {
 			model.addAttribute("opportunity", new OpportunityEntity());
@@ -34,44 +47,60 @@ public class OpportunityMvcController {
 		return "add-edit-opportunity";
 	}
 	
+	/**
+	 * Create a new opportunity
+	 * <p>
+	 * @param opportunity
+	 * @return Redirecs to list of opportunities
+	 */
 	@RequestMapping(path = "/createOpportunity", method = RequestMethod.POST)
 	public String createOrUpdateOpportunity(OpportunityEntity opportunity) 
 	{
-		oppService.createOrUpdateOpportunity(opportunity);
+		service.createOrUpdateOpportunity(opportunity);
 		return "redirect:/opp";
 	}
-	/*
-	@RequestMapping
-	public String getAllVolunteers(Model model) 
-	{
-		List<VolunteerEntity> list = service.getAllVolunteers();
 
-		model.addAttribute("volunteers", list);
-		return "list-volunteers";
-	}
-
+	/**
+	 * Delete the opportunity by id
+	 * <p>
+	 * @param model
+	 * @param id
+	 * @return Redirects to list of opportunities
+	 * @throws RecordNotFoundException
+	 */
 	@RequestMapping(path = "/delete/{id}")
-	public String deleteVolunteerById(Model model, @PathVariable("id") Long id) 
+	public String deleteOpportunityById(Model model, @PathVariable("id") Long id) 
 							throws RecordNotFoundException 
 	{
-		service.deleteVolunteerById(id);
-		return "redirect:/";
+		service.deleteOpportunityById(id);
+		return "redirect:/opp";
 	}
 
-	@RequestMapping(path = "/createVolunteer", method = RequestMethod.POST)
-	public String createOrUpdateVolunteer(VolunteerEntity volunteer) 
-	{
-		service.createOrUpdateVolunteer(volunteer);
-		return "redirect:/";
-	}
-*/
+	/**
+	 * Lists all current opporunity records
+	 * <p>
+	 * @param model
+	 * @return list-opportunities html resource template
+	 */
 	@RequestMapping
 	public String getAllOpportunities(Model model) 
 	{
-		List<OpportunityEntity> list = oppService.getAllOpportunities();
+		List<OpportunityEntity> list = service.getAllOpportunities();
 
 		model.addAttribute("opportunities", list);
 		return "list-opportunities";
+	}
+
+	/**
+	 * Allow a volunter to sign up for an opportunity
+	 * <p>
+	 * @param opportunity
+	 * @return Redirect to volunteer info entry page
+	 */
+	@RequestMapping(path = "/signUp", method = RequestMethod.POST)
+	public String signUp(OpportunityEntity opportunity) 
+	{
+		return "redirect:/vol";
 	}
 
 }

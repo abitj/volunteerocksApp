@@ -19,19 +19,19 @@
                     <form action="#" th:action="@{/vol/createVolunteer}" th:object="${volunteer}" method="post">
                         <div class="row">
                             <div class="form-group col-md-8">
-                                <label for="name" class="col-form-label">Full Name</label> 
+                             <!--   <label for="name" class="col-form-label">Full Name</label> -->
                                 <input type="text" th:field="*{FullName}" class="form-control" 
                                             id="FullName" placeholder="Full Name" />
                             </div>
                             <div class="form-group col-md-8">
-                                <label for="name" class="col-form-label">Location</label> 
+                               <!-- <label for="name" class="col-form-label">Location</label> -->
                                 <input type="text" th:field="*{Location}" class="form-control" 
                                             id="Location" placeholder="Location" />
                             </div>
                             <div class="form-group col-md-8">
-                                <label for="email" class="col-form-label">Email</label> 
+                               <!-- <label for="email" class="col-form-label">Email</label> -->
                                 <input type="text" th:field="*{Email}" class="form-control" 
-                                            id="Email" placeholder="Email Id" />
+                                            id="Email" placeholder="Email Address" />
                             </div>
 
                             <div class="col-md-6">

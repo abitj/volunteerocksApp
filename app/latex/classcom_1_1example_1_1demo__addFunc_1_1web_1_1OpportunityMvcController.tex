@@ -1,0 +1,119 @@
+\hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController}{}\doxysection{com.\+example.\+demo\+\_\+add\+Func.\+web.\+Opportunity\+Mvc\+Controller Class Reference}
+\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController}\index{com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a30f6259aa413f08d36915c70906e6358}{edit\+Opportunity\+By\+Id}} (Model model, @Path\+Variable(\char`\"{}id\char`\"{}) Optional$<$ Long $>$ id)  throws Record\+Not\+Found\+Exception  	
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a5a55bc907ff32e3848adb42cc88ebf90}{create\+Or\+Update\+Opportunity}} (\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1OpportunityEntity}{Opportunity\+Entity}} opportunity)
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a00635a999e56a21af23245dab0f1864b}{delete\+Opportunity\+By\+Id}} (Model model, @Path\+Variable(\char`\"{}id\char`\"{}) Long id)  throws Record\+Not\+Found\+Exception  	
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a7cb484a90aeeb1205a5f276901f0f285}{get\+All\+Opportunities}} (Model model)
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_aef3eaba0a73df532590f9ab791360c30}{sign\+Up}} (\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1OpportunityEntity}{Opportunity\+Entity}} opportunity)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a5a55bc907ff32e3848adb42cc88ebf90}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a5a55bc907ff32e3848adb42cc88ebf90}} 
+\index{com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}!createOrUpdateOpportunity@{createOrUpdateOpportunity}}
+\index{createOrUpdateOpportunity@{createOrUpdateOpportunity}!com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}}
+\doxysubsubsection{\texorpdfstring{createOrUpdateOpportunity()}{createOrUpdateOpportunity()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Opportunity\+Mvc\+Controller.\+create\+Or\+Update\+Opportunity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1OpportunityEntity}{Opportunity\+Entity}}}]{opportunity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new opportunity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opportunity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirecs to list of opportunities 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a00635a999e56a21af23245dab0f1864b}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a00635a999e56a21af23245dab0f1864b}} 
+\index{com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}!deleteOpportunityById@{deleteOpportunityById}}
+\index{deleteOpportunityById@{deleteOpportunityById}!com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}}
+\doxysubsubsection{\texorpdfstring{deleteOpportunityById()}{deleteOpportunityById()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Opportunity\+Mvc\+Controller.\+delete\+Opportunity\+By\+Id (\begin{DoxyParamCaption}\item[{Model}]{model,  }\item[{@Path\+Variable(\char`\"{}id\char`\"{}) Long}]{id }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1exception_1_1RecordNotFoundException}{Record\+Not\+Found\+Exception}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete the opportunity by id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirects to list of opportunities 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Record\+Not\+Found\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a30f6259aa413f08d36915c70906e6358}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a30f6259aa413f08d36915c70906e6358}} 
+\index{com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}!editOpportunityById@{editOpportunityById}}
+\index{editOpportunityById@{editOpportunityById}!com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}}
+\doxysubsubsection{\texorpdfstring{editOpportunityById()}{editOpportunityById()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Opportunity\+Mvc\+Controller.\+edit\+Opportunity\+By\+Id (\begin{DoxyParamCaption}\item[{Model}]{model,  }\item[{@Path\+Variable(\char`\"{}id\char`\"{}) Optional$<$ Long $>$}]{id }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1exception_1_1RecordNotFoundException}{Record\+Not\+Found\+Exception}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+Edits the opportunity entity 
+
+Selects the opportunity by id then presents the values for editing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \\
+\hline
+{\em id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+add-\/edit-\/opportunity html resource template 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Record\+Not\+Found\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a7cb484a90aeeb1205a5f276901f0f285}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a7cb484a90aeeb1205a5f276901f0f285}} 
+\index{com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}!getAllOpportunities@{getAllOpportunities}}
+\index{getAllOpportunities@{getAllOpportunities}!com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}}
+\doxysubsubsection{\texorpdfstring{getAllOpportunities()}{getAllOpportunities()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Opportunity\+Mvc\+Controller.\+get\+All\+Opportunities (\begin{DoxyParamCaption}\item[{Model}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Lists all current opporunity records 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list-\/opportunities html resource template 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_aef3eaba0a73df532590f9ab791360c30}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_aef3eaba0a73df532590f9ab791360c30}} 
+\index{com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}!signUp@{signUp}}
+\index{signUp@{signUp}!com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}}
+\doxysubsubsection{\texorpdfstring{signUp()}{signUp()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Opportunity\+Mvc\+Controller.\+sign\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1OpportunityEntity}{Opportunity\+Entity}}}]{opportunity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allow a volunter to sign up for an opportunity 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opportunity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirect to volunteer info entry page 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/example/demo\+\_\+add\+Func/web/Opportunity\+Mvc\+Controller.\+java\end{DoxyCompactItemize}
