@@ -8,6 +8,9 @@ import org.springframework.stereotype.Repository;
 
 import com.example.demo_addFunc.model.OpportunityEntity;
 
+/**
+ * OpportunityRepository, extends CrudRepository
+ */
 @Repository
 public interface OpportunityRepository
     extends CrudRepository<OpportunityEntity, Long> {

@@ -3,18 +3,75 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a429dabb0f02d62714f79fcfb0e9fdb07}\label{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a429dabb0f02d62714f79fcfb0e9fdb07}} 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} $>$ {\bfseries get\+All\+Volunteers} ()
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a429dabb0f02d62714f79fcfb0e9fdb07}{get\+All\+Volunteers}} ()
 \item 
-\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a3275c44df778df5853d262f838e4a0bd}\label{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a3275c44df778df5853d262f838e4a0bd}} 
-\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} {\bfseries get\+Volunteer\+By\+Id} (Long id)  throws Record\+Not\+Found\+Exception  	
+\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a3275c44df778df5853d262f838e4a0bd}{get\+Volunteer\+By\+Id}} (Long id)  throws Record\+Not\+Found\+Exception  	
 \item 
-\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a3d32b94362dbef7e7b039f9858edcc36}\label{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a3d32b94362dbef7e7b039f9858edcc36}} 
-\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} {\bfseries create\+Or\+Update\+Volunteer} (\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} entity)
+\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a3d32b94362dbef7e7b039f9858edcc36}{create\+Or\+Update\+Volunteer}} (\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} entity)
 \item 
-\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a6fe47b62239fdb24a9401e08c85a5ea4}\label{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a6fe47b62239fdb24a9401e08c85a5ea4}} 
-void {\bfseries delete\+Volunteer\+By\+Id} (Long id)  throws Record\+Not\+Found\+Exception  	
+void \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a6fe47b62239fdb24a9401e08c85a5ea4}{delete\+Volunteer\+By\+Id}} (Long id)  throws Record\+Not\+Found\+Exception  	
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a3d32b94362dbef7e7b039f9858edcc36}\label{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a3d32b94362dbef7e7b039f9858edcc36}} 
+\index{com.example.demo\_addFunc.service.VolunteerService@{com.example.demo\_addFunc.service.VolunteerService}!createOrUpdateVolunteer@{createOrUpdateVolunteer}}
+\index{createOrUpdateVolunteer@{createOrUpdateVolunteer}!com.example.demo\_addFunc.service.VolunteerService@{com.example.demo\_addFunc.service.VolunteerService}}
+\doxysubsubsection{\texorpdfstring{createOrUpdateVolunteer()}{createOrUpdateVolunteer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} com.\+example.\+demo\+\_\+add\+Func.\+service.\+Volunteer\+Service.\+create\+Or\+Update\+Volunteer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}}}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new or update an existing volunteer 
+\begin{DoxyParams}{Parameters}
+{\em entity} & -\/ volunteer to update, if empty then create a new volunteer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+volunteer entity object just edited or created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a6fe47b62239fdb24a9401e08c85a5ea4}\label{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a6fe47b62239fdb24a9401e08c85a5ea4}} 
+\index{com.example.demo\_addFunc.service.VolunteerService@{com.example.demo\_addFunc.service.VolunteerService}!deleteVolunteerById@{deleteVolunteerById}}
+\index{deleteVolunteerById@{deleteVolunteerById}!com.example.demo\_addFunc.service.VolunteerService@{com.example.demo\_addFunc.service.VolunteerService}}
+\doxysubsubsection{\texorpdfstring{deleteVolunteerById()}{deleteVolunteerById()}}
+{\footnotesize\ttfamily void com.\+example.\+demo\+\_\+add\+Func.\+service.\+Volunteer\+Service.\+delete\+Volunteer\+By\+Id (\begin{DoxyParamCaption}\item[{Long}]{id }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1exception_1_1RecordNotFoundException}{Record\+Not\+Found\+Exception}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete a volunteer 
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ unique id of the volunteer to delete \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Record\+Not\+Found\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a429dabb0f02d62714f79fcfb0e9fdb07}\label{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a429dabb0f02d62714f79fcfb0e9fdb07}} 
+\index{com.example.demo\_addFunc.service.VolunteerService@{com.example.demo\_addFunc.service.VolunteerService}!getAllVolunteers@{getAllVolunteers}}
+\index{getAllVolunteers@{getAllVolunteers}!com.example.demo\_addFunc.service.VolunteerService@{com.example.demo\_addFunc.service.VolunteerService}}
+\doxysubsubsection{\texorpdfstring{getAllVolunteers()}{getAllVolunteers()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}}$>$ com.\+example.\+demo\+\_\+add\+Func.\+service.\+Volunteer\+Service.\+get\+All\+Volunteers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Generate a list of volunteers \begin{DoxyReturn}{Returns}
+List of Volunteer\+Entity objects or new Array\+List of Volunteer\+Entity if list is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a3275c44df778df5853d262f838e4a0bd}\label{classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService_a3275c44df778df5853d262f838e4a0bd}} 
+\index{com.example.demo\_addFunc.service.VolunteerService@{com.example.demo\_addFunc.service.VolunteerService}!getVolunteerById@{getVolunteerById}}
+\index{getVolunteerById@{getVolunteerById}!com.example.demo\_addFunc.service.VolunteerService@{com.example.demo\_addFunc.service.VolunteerService}}
+\doxysubsubsection{\texorpdfstring{getVolunteerById()}{getVolunteerById()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} com.\+example.\+demo\+\_\+add\+Func.\+service.\+Volunteer\+Service.\+get\+Volunteer\+By\+Id (\begin{DoxyParamCaption}\item[{Long}]{id }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1exception_1_1RecordNotFoundException}{Record\+Not\+Found\+Exception}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieve a volunteer using the id for the index/key 
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ unique id of volunteer to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+volunteer object matching the id parameter 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Record\+Not\+Found\+Exception} & \\
+\hline
+\end{DoxyExceptions}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

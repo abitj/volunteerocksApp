@@ -1,5 +1,5 @@
 /**
- * Opportunity service member implementations
+ * Implements the Opportunity service functions
  */
 package com.example.demo_addFunc.service;
 
@@ -21,6 +21,10 @@ public class OpportunityService {
 	@Autowired
 	OpportunityRepository repository;
 	
+	/**
+	 * Generate a list of opportunities
+	 * @return List of OpportunityEntity objects or new ArrayList of OpportunityEntity if list is empty
+	 */
 	public List<OpportunityEntity> getAllOpportunities()
 	{
 		List<OpportunityEntity> result = (List<OpportunityEntity>) repository.findAll();
@@ -32,6 +36,12 @@ public class OpportunityService {
 		}
 	}
 	
+	/**
+	 * Retrieve an opportunity using the id for the index/key
+	 * @param id - unique id of opportunity to retrieve
+	 * @return opportunity object matching the id parameter
+	 * @throws RecordNotFoundException
+	 */
 	public OpportunityEntity getOpportunityById(Long id) throws RecordNotFoundException 
 	{
 		Optional<OpportunityEntity> opportunity = repository.findById(id);
@@ -43,6 +53,11 @@ public class OpportunityService {
 		}
 	}
 	
+	/**
+	 * Sign up for a volunteering opportunity
+	 * @param entity - the opportunity to sign up for
+	 * @return opportunity just signed up for
+	 */
 	public OpportunityEntity signUp(OpportunityEntity entity)
 	{
 		if(entity.getId()  == null) 
@@ -53,6 +68,11 @@ public class OpportunityService {
 		return entity;
 	}
 	
+	/**
+	 * Create a new or update an existing opportunity
+	 * @param entity - opportunity to update, if empty then create a new opportunity
+	 * @return opportunity entity object just edited or created
+	 */
 	public OpportunityEntity createOrUpdateOpportunity(OpportunityEntity entity) 
 	{
 		if(entity.getId()  == null) 
@@ -83,6 +103,11 @@ public class OpportunityService {
 		}
 	} 
 	
+	/**
+	 * Delete an opportunity 
+	 * @param id - unique id of the opportunity to delete
+	 * @throws RecordNotFoundException
+	 */
 	public void deleteOpportunityById(Long id) throws RecordNotFoundException 
 	{
 		Optional<OpportunityEntity> opportunity = repository.findById(id);

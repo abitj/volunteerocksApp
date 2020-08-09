@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['deleteopportunitybyid_5',['deleteOpportunityById',['../classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController.html#a00635a999e56a21af23245dab0f1864b',1,'com::example::demo_addFunc::web::OpportunityMvcController']]],
-  ['demoaddfuncapplication_6',['DemoAddFuncApplication',['../classcom_1_1example_1_1demo__addFunc_1_1DemoAddFuncApplication.html',1,'com::example::demo_addFunc']]]
+  ['deleteopportunitybyid_8',['deleteOpportunityById',['../classcom_1_1example_1_1demo__addFunc_1_1service_1_1OpportunityService.html#a40bd6da24adfab3028ad4b6dc04a4020',1,'com.example.demo_addFunc.service.OpportunityService.deleteOpportunityById()'],['../classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController.html#a00635a999e56a21af23245dab0f1864b',1,'com.example.demo_addFunc.web.OpportunityMvcController.deleteOpportunityById()']]],
+  ['deleteorganizationbyid_9',['deleteOrganizationById',['../classcom_1_1example_1_1demo__addFunc_1_1service_1_1OrganizationService.html#afdb4195be3ed380c180c0eb6fb7a031b',1,'com.example.demo_addFunc.service.OrganizationService.deleteOrganizationById()'],['../classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController.html#a26000df24edac8917880b50b097e6b11',1,'com.example.demo_addFunc.web.OrganizationMvcController.deleteOrganizationById()']]],
+  ['deletevolunteerbyid_10',['deleteVolunteerById',['../classcom_1_1example_1_1demo__addFunc_1_1service_1_1VolunteerService.html#a6fe47b62239fdb24a9401e08c85a5ea4',1,'com.example.demo_addFunc.service.VolunteerService.deleteVolunteerById()'],['../classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController.html#aa3a6b510c7cdf95c34ff92cf5d8be538',1,'com.example.demo_addFunc.web.VolunteerMvcController.deleteVolunteerById()']]],
+  ['demoaddfuncapplication_11',['DemoAddFuncApplication',['../classcom_1_1example_1_1demo__addFunc_1_1DemoAddFuncApplication.html',1,'com::example::demo_addFunc']]]
 ];

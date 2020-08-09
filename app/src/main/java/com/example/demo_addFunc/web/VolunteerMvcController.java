@@ -1,3 +1,6 @@
+/**
+ * Implementation of the Volunteer controller
+ */
 package com.example.demo_addFunc.web;
 
 import java.util.List;
@@ -21,6 +24,12 @@ public class VolunteerMvcController {
 	@Autowired
 	VolunteerService service;
 
+	/**
+	 * Lists all current volunteer records
+	 * <p>
+	 * @param model
+	 * @return list-volunteers html resource template
+	 */
 	@RequestMapping
 	public String getAllVolunteers(Model model) 
 	{
@@ -30,7 +39,17 @@ public class VolunteerMvcController {
 		return "list-volunteers";
 	}
 
-	@RequestMapping(path = {"/edit", "/vol/edit/{id}"})
+	/**
+	 * Edits the volunteer entity
+	 * <p>
+	 * Selects the volunteer by id then presents the values for editing
+	 * <p>
+	 * @param model
+	 * @param id id of the volunteer to retrieve for editing
+	 * @return add-edit-volunteer html resource template
+	 * @throws RecordNotFoundException
+	 */
+	@RequestMapping(path = {"/edit", "/edit/{id}"})
 	public String editVolunteerById(Model model, @PathVariable("id") Optional<Long> id) 
 							throws RecordNotFoundException 
 	{
@@ -43,6 +62,14 @@ public class VolunteerMvcController {
 		return "add-edit-volunteer";
 	}
 	
+	/**
+	 * Delete the volunteer by id
+	 * <p>
+	 * @param model
+	 * @param id unique id of the volunteer to delete
+	 * @return Redirects to list of volunteers
+	 * @throws RecordNotFoundException
+	 */
 	@RequestMapping(path = "/delete/{id}")
 	public String deleteVolunteerById(Model model, @PathVariable("id") Long id) 
 							throws RecordNotFoundException 
@@ -51,6 +78,12 @@ public class VolunteerMvcController {
 		return "redirect:/vol";
 	}
 
+	/**
+	 * Create a new volunteer or edit an existing volunteer
+	 * <p>
+	 * @param opportunity
+	 * @return Redirects to list of volunteers
+	 */
 	@RequestMapping(path = "/createVolunteer", method = RequestMethod.POST)
 	public String createOrUpdateVolunteer(VolunteerEntity volunteer) 
 	{

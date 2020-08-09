@@ -1,3 +1,6 @@
+/**
+ * Implementation of the VolunteeRocks controller
+ */
 package com.example.demo_addFunc.web;
 
 import java.util.List;
@@ -21,6 +24,11 @@ public class VolunteeRocksMvcController {
 	@Autowired
 	VolunteerService service;
 
+	/**
+	 * The main landing page for the application
+	 * @param model
+	 * @return volunteeRocks html template
+	 */
 	@RequestMapping
 	public String runVolunteeRocks(Model model) 
 	{

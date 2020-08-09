@@ -6,15 +6,79 @@
 \mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a400c4cdeb2e15175164c3cf4d7bc430b}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a400c4cdeb2e15175164c3cf4d7bc430b}} 
 String {\bfseries get\+All\+Organizations} (Model model)
 \item 
-\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a91ab6c1db7584c3c7ff0c52457abc833}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a91ab6c1db7584c3c7ff0c52457abc833}} 
-String {\bfseries edit\+Organization\+By\+Id} (Model model, @Path\+Variable(\char`\"{}id\char`\"{}) Optional$<$ Long $>$ id)  throws Record\+Not\+Found\+Exception  	
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a91ab6c1db7584c3c7ff0c52457abc833}{edit\+Organization\+By\+Id}} (Model model, @Path\+Variable(\char`\"{}id\char`\"{}) Optional$<$ Long $>$ id)  throws Record\+Not\+Found\+Exception  	
 \item 
-\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a26000df24edac8917880b50b097e6b11}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a26000df24edac8917880b50b097e6b11}} 
-String {\bfseries delete\+Organization\+By\+Id} (Model model, @Path\+Variable(\char`\"{}id\char`\"{}) Long id)  throws Record\+Not\+Found\+Exception  	
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a26000df24edac8917880b50b097e6b11}{delete\+Organization\+By\+Id}} (Model model, @Path\+Variable(\char`\"{}id\char`\"{}) Long id)  throws Record\+Not\+Found\+Exception  	
 \item 
-\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a7a039950ff0905682c8fa68480f55ae0}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a7a039950ff0905682c8fa68480f55ae0}} 
-String {\bfseries create\+Or\+Update\+Organization} (\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1OrganizationEntity}{Organization\+Entity}} organization)
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a7a039950ff0905682c8fa68480f55ae0}{create\+Or\+Update\+Organization}} (\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1OrganizationEntity}{Organization\+Entity}} organization)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a7a039950ff0905682c8fa68480f55ae0}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a7a039950ff0905682c8fa68480f55ae0}} 
+\index{com.example.demo\_addFunc.web.OrganizationMvcController@{com.example.demo\_addFunc.web.OrganizationMvcController}!createOrUpdateOrganization@{createOrUpdateOrganization}}
+\index{createOrUpdateOrganization@{createOrUpdateOrganization}!com.example.demo\_addFunc.web.OrganizationMvcController@{com.example.demo\_addFunc.web.OrganizationMvcController}}
+\doxysubsubsection{\texorpdfstring{createOrUpdateOrganization()}{createOrUpdateOrganization()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Organization\+Mvc\+Controller.\+create\+Or\+Update\+Organization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1OrganizationEntity}{Organization\+Entity}}}]{organization }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new organization 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opportunity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirects to list of organizations 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a26000df24edac8917880b50b097e6b11}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a26000df24edac8917880b50b097e6b11}} 
+\index{com.example.demo\_addFunc.web.OrganizationMvcController@{com.example.demo\_addFunc.web.OrganizationMvcController}!deleteOrganizationById@{deleteOrganizationById}}
+\index{deleteOrganizationById@{deleteOrganizationById}!com.example.demo\_addFunc.web.OrganizationMvcController@{com.example.demo\_addFunc.web.OrganizationMvcController}}
+\doxysubsubsection{\texorpdfstring{deleteOrganizationById()}{deleteOrganizationById()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Organization\+Mvc\+Controller.\+delete\+Organization\+By\+Id (\begin{DoxyParamCaption}\item[{Model}]{model,  }\item[{@Path\+Variable(\char`\"{}id\char`\"{}) Long}]{id }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1exception_1_1RecordNotFoundException}{Record\+Not\+Found\+Exception}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete the organization by id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \\
+\hline
+{\em id} & unique id of the organization to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirects to list of organizations 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Record\+Not\+Found\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a91ab6c1db7584c3c7ff0c52457abc833}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OrganizationMvcController_a91ab6c1db7584c3c7ff0c52457abc833}} 
+\index{com.example.demo\_addFunc.web.OrganizationMvcController@{com.example.demo\_addFunc.web.OrganizationMvcController}!editOrganizationById@{editOrganizationById}}
+\index{editOrganizationById@{editOrganizationById}!com.example.demo\_addFunc.web.OrganizationMvcController@{com.example.demo\_addFunc.web.OrganizationMvcController}}
+\doxysubsubsection{\texorpdfstring{editOrganizationById()}{editOrganizationById()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Organization\+Mvc\+Controller.\+edit\+Organization\+By\+Id (\begin{DoxyParamCaption}\item[{Model}]{model,  }\item[{@Path\+Variable(\char`\"{}id\char`\"{}) Optional$<$ Long $>$}]{id }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1exception_1_1RecordNotFoundException}{Record\+Not\+Found\+Exception}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+Edits the Organizaton 
+
+Selects the organization by id then presents the values for editing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \\
+\hline
+{\em id} & id of the organization to retrieve for editing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+add-\/edit-\/organization html resource template 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Record\+Not\+Found\+Exception} & \\
+\hline
+\end{DoxyExceptions}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

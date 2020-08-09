@@ -1,3 +1,6 @@
+/**
+ * Implements the Organization service functions
+ */
 package com.example.demo_addFunc.service;
 
 import java.util.ArrayList;
@@ -18,6 +21,10 @@ public class OrganizationService {
 	@Autowired
 	OrganizationRepository repository;
 	
+	/**
+	 * Generate a list of organizations
+	 * @return List of OrganizationEntity objects or new ArrayList of OrganizationEntity if list is empty
+	 */
 	public List<OrganizationEntity> getAllOrganizations()
 	{
 		List<OrganizationEntity> result = (List<OrganizationEntity>) repository.findAll();
@@ -29,6 +36,12 @@ public class OrganizationService {
 		}
 	}
 	
+	/**
+	 * Retrieve an organization using the id for the index/key
+	 * @param id - unique id of organization to retrieve
+	 * @return organization object matching the id parameter
+	 * @throws RecordNotFoundException
+	 */
 	public OrganizationEntity getOrganizationById(Long id) throws RecordNotFoundException 
 	{
 		Optional<OrganizationEntity> organization = repository.findById(id);
@@ -40,6 +53,11 @@ public class OrganizationService {
 		}
 	}
 	
+	/**
+	 * Create a new or update an existing organization
+	 * @param entity - organization to update, if empty then create a new organization
+	 * @return organization entity object just edited or created
+	 */
 	public OrganizationEntity createOrUpdateOrganization(OrganizationEntity entity) 
 	{
 		if(entity.getId()  == null) 
@@ -71,6 +89,11 @@ public class OrganizationService {
 		}
 	} 
 	
+	/**
+	 * Delete an organization 
+	 * @param id - unique id of the organization to delete
+	 * @throws RecordNotFoundException
+	 */
 	public void deleteOrganizationById(Long id) throws RecordNotFoundException 
 	{
 		Optional<OrganizationEntity> organization = repository.findById(id);
