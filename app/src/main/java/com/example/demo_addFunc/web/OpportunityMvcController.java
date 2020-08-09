@@ -1,5 +1,5 @@
 /**
- * Opportunity controller logic
+ * Implementation of the Opportunity controller
  */
 package com.example.demo_addFunc.web;
 
@@ -30,7 +30,7 @@ public class OpportunityMvcController {
 	 * Selects the opportunity by id then presents the values for editing
 	 * <p>
 	 * @param model
-	 * @param id
+	 * @param idid of the opportunity to retrieve for editing
 	 * @return add-edit-opportunity html resource template
 	 * @throws RecordNotFoundException
 	 */
@@ -48,10 +48,10 @@ public class OpportunityMvcController {
 	}
 	
 	/**
-	 * Create a new opportunity
+	 * Create a new opportunity or edit an existing opportunity
 	 * <p>
 	 * @param opportunity
-	 * @return Redirecs to list of opportunities
+	 * @return Redirects to list of opportunities
 	 */
 	@RequestMapping(path = "/createOpportunity", method = RequestMethod.POST)
 	public String createOrUpdateOpportunity(OpportunityEntity opportunity) 
@@ -64,7 +64,7 @@ public class OpportunityMvcController {
 	 * Delete the opportunity by id
 	 * <p>
 	 * @param model
-	 * @param id
+	 * @param id unique id of the opportunity to delete
 	 * @return Redirects to list of opportunities
 	 * @throws RecordNotFoundException
 	 */

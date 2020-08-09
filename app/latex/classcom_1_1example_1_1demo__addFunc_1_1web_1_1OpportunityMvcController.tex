@@ -22,7 +22,7 @@ String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1Opportuni
 \doxysubsubsection{\texorpdfstring{createOrUpdateOpportunity()}{createOrUpdateOpportunity()}}
 {\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Opportunity\+Mvc\+Controller.\+create\+Or\+Update\+Opportunity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1OpportunityEntity}{Opportunity\+Entity}}}]{opportunity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Create a new opportunity 
+Create a new opportunity or edit an existing opportunity 
 
 
 \begin{DoxyParams}{Parameters}
@@ -30,7 +30,7 @@ Create a new opportunity
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Redirecs to list of opportunities 
+Redirects to list of opportunities 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a00635a999e56a21af23245dab0f1864b}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1OpportunityMvcController_a00635a999e56a21af23245dab0f1864b}} 
 \index{com.example.demo\_addFunc.web.OpportunityMvcController@{com.example.demo\_addFunc.web.OpportunityMvcController}!deleteOpportunityById@{deleteOpportunityById}}
@@ -44,7 +44,7 @@ Delete the opportunity by id
 \begin{DoxyParams}{Parameters}
 {\em model} & \\
 \hline
-{\em id} & \\
+{\em id} & unique id of the opportunity to delete \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -69,7 +69,7 @@ Selects the opportunity by id then presents the values for editing
 \begin{DoxyParams}{Parameters}
 {\em model} & \\
 \hline
-{\em id} & \\
+{\em idid} & of the opportunity to retrieve for editing \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}

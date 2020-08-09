@@ -3,18 +3,97 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_a2e7ea91e6e3244601dcf2598cb7d55db}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_a2e7ea91e6e3244601dcf2598cb7d55db}} 
-String {\bfseries get\+All\+Volunteers} (Model model)
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_a2e7ea91e6e3244601dcf2598cb7d55db}{get\+All\+Volunteers}} (Model model)
 \item 
-\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_a00c56b29329550ad84f3eeb803a05ed9}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_a00c56b29329550ad84f3eeb803a05ed9}} 
-String {\bfseries edit\+Volunteer\+By\+Id} (Model model, @Path\+Variable(\char`\"{}id\char`\"{}) Optional$<$ Long $>$ id)  throws Record\+Not\+Found\+Exception  	
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_a00c56b29329550ad84f3eeb803a05ed9}{edit\+Volunteer\+By\+Id}} (Model model, @Path\+Variable(\char`\"{}id\char`\"{}) Optional$<$ Long $>$ id)  throws Record\+Not\+Found\+Exception  	
 \item 
-\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_aa3a6b510c7cdf95c34ff92cf5d8be538}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_aa3a6b510c7cdf95c34ff92cf5d8be538}} 
-String {\bfseries delete\+Volunteer\+By\+Id} (Model model, @Path\+Variable(\char`\"{}id\char`\"{}) Long id)  throws Record\+Not\+Found\+Exception  	
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_aa3a6b510c7cdf95c34ff92cf5d8be538}{delete\+Volunteer\+By\+Id}} (Model model, @Path\+Variable(\char`\"{}id\char`\"{}) Long id)  throws Record\+Not\+Found\+Exception  	
 \item 
-\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_acde814b1cf1c1732d99fa3d70afdf138}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_acde814b1cf1c1732d99fa3d70afdf138}} 
-String {\bfseries create\+Or\+Update\+Volunteer} (\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} volunteer)
+String \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_acde814b1cf1c1732d99fa3d70afdf138}{create\+Or\+Update\+Volunteer}} (\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}} volunteer)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_acde814b1cf1c1732d99fa3d70afdf138}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_acde814b1cf1c1732d99fa3d70afdf138}} 
+\index{com.example.demo\_addFunc.web.VolunteerMvcController@{com.example.demo\_addFunc.web.VolunteerMvcController}!createOrUpdateVolunteer@{createOrUpdateVolunteer}}
+\index{createOrUpdateVolunteer@{createOrUpdateVolunteer}!com.example.demo\_addFunc.web.VolunteerMvcController@{com.example.demo\_addFunc.web.VolunteerMvcController}}
+\doxysubsubsection{\texorpdfstring{createOrUpdateVolunteer()}{createOrUpdateVolunteer()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Volunteer\+Mvc\+Controller.\+create\+Or\+Update\+Volunteer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1model_1_1VolunteerEntity}{Volunteer\+Entity}}}]{volunteer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new volunteer or edit an existing volunteer 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opportunity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirects to list of volunteers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_aa3a6b510c7cdf95c34ff92cf5d8be538}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_aa3a6b510c7cdf95c34ff92cf5d8be538}} 
+\index{com.example.demo\_addFunc.web.VolunteerMvcController@{com.example.demo\_addFunc.web.VolunteerMvcController}!deleteVolunteerById@{deleteVolunteerById}}
+\index{deleteVolunteerById@{deleteVolunteerById}!com.example.demo\_addFunc.web.VolunteerMvcController@{com.example.demo\_addFunc.web.VolunteerMvcController}}
+\doxysubsubsection{\texorpdfstring{deleteVolunteerById()}{deleteVolunteerById()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Volunteer\+Mvc\+Controller.\+delete\+Volunteer\+By\+Id (\begin{DoxyParamCaption}\item[{Model}]{model,  }\item[{@Path\+Variable(\char`\"{}id\char`\"{}) Long}]{id }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1exception_1_1RecordNotFoundException}{Record\+Not\+Found\+Exception}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete the volunteer by id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \\
+\hline
+{\em id} & unique id of the volunteer to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Redirects to list of volunteers 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Record\+Not\+Found\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_a00c56b29329550ad84f3eeb803a05ed9}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_a00c56b29329550ad84f3eeb803a05ed9}} 
+\index{com.example.demo\_addFunc.web.VolunteerMvcController@{com.example.demo\_addFunc.web.VolunteerMvcController}!editVolunteerById@{editVolunteerById}}
+\index{editVolunteerById@{editVolunteerById}!com.example.demo\_addFunc.web.VolunteerMvcController@{com.example.demo\_addFunc.web.VolunteerMvcController}}
+\doxysubsubsection{\texorpdfstring{editVolunteerById()}{editVolunteerById()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Volunteer\+Mvc\+Controller.\+edit\+Volunteer\+By\+Id (\begin{DoxyParamCaption}\item[{Model}]{model,  }\item[{@Path\+Variable(\char`\"{}id\char`\"{}) Optional$<$ Long $>$}]{id }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classcom_1_1example_1_1demo__addFunc_1_1exception_1_1RecordNotFoundException}{Record\+Not\+Found\+Exception}}\hspace{0.3cm}{\ttfamily [inline]}}
+
+Edits the volunteer entity 
+
+Selects the volunteer by id then presents the values for editing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \\
+\hline
+{\em id} & id of the volunteer to retrieve for editing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+add-\/edit-\/volunteer html resource template 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Record\+Not\+Found\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_a2e7ea91e6e3244601dcf2598cb7d55db}\label{classcom_1_1example_1_1demo__addFunc_1_1web_1_1VolunteerMvcController_a2e7ea91e6e3244601dcf2598cb7d55db}} 
+\index{com.example.demo\_addFunc.web.VolunteerMvcController@{com.example.demo\_addFunc.web.VolunteerMvcController}!getAllVolunteers@{getAllVolunteers}}
+\index{getAllVolunteers@{getAllVolunteers}!com.example.demo\_addFunc.web.VolunteerMvcController@{com.example.demo\_addFunc.web.VolunteerMvcController}}
+\doxysubsubsection{\texorpdfstring{getAllVolunteers()}{getAllVolunteers()}}
+{\footnotesize\ttfamily String com.\+example.\+demo\+\_\+add\+Func.\+web.\+Volunteer\+Mvc\+Controller.\+get\+All\+Volunteers (\begin{DoxyParamCaption}\item[{Model}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Lists all current volunteer records 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list-\/volunteers html resource template 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -1,3 +1,6 @@
+/**
+ * Implements the Volunteer service functions
+ */
 package com.example.demo_addFunc.service;
 
 import java.util.ArrayList;
@@ -18,6 +21,10 @@ public class VolunteerService {
 	@Autowired
 	VolunteerRepository repository;
 	
+	/**
+	 * Generate a list of volunteers
+	 * @return List of VolunteerEntity objects or new ArrayList of VolunteerEntity if list is empty
+	 */
 	public List<VolunteerEntity> getAllVolunteers()
 	{
 		List<VolunteerEntity> result = (List<VolunteerEntity>) repository.findAll();
@@ -29,6 +36,12 @@ public class VolunteerService {
 		}
 	}
 	
+	/**
+	 * Retrieve a volunteer using the id for the index/key
+	 * @param id - unique id of volunteer to retrieve
+	 * @return volunteer object matching the id parameter
+	 * @throws RecordNotFoundException
+	 */
 	public VolunteerEntity getVolunteerById(Long id) throws RecordNotFoundException 
 	{
 		Optional<VolunteerEntity> volunteer = repository.findById(id);
@@ -40,6 +53,11 @@ public class VolunteerService {
 		}
 	}
 	
+	/**
+	 * Create a new or update an existing volunteer
+	 * @param entity - volunteer to update, if empty then create a new volunteer
+	 * @return volunteer entity object just edited or created
+	 */
 	public VolunteerEntity createOrUpdateVolunteer(VolunteerEntity entity) 
 	{
 		if(entity.getId()  == null) 
@@ -70,6 +88,11 @@ public class VolunteerService {
 		}
 	} 
 	
+	/**
+	 * Delete a volunteer 
+	 * @param id - unique id of the volunteer to delete
+	 * @throws RecordNotFoundException
+	 */
 	public void deleteVolunteerById(Long id) throws RecordNotFoundException 
 	{
 		Optional<VolunteerEntity> volunteer = repository.findById(id);

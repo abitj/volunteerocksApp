@@ -29,53 +29,72 @@ public class OpportunityEntity {
     private int NumberNeeded;
 	
 	/**
-	 * Auto-generated value
+	 * Retrieves record id for this opportunity
 	 * 
 	 */
     public Long getId() {
 		return id;
 	}
 
+	/**
+	 * Assigns record id for this opportunity
+	 * 
+	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
 
 	/**
-	 * Describes the opportunity
+	 * Retrieves description for the opportunity
 	 * 
 	 */
 	public String getDescription() {
 		return Description;
 	}
 
+	/**
+	 * Assigns description for the opportunity
+	 * 
+	 */
 	public void setDescription(String Description) {
 		this.Description = Description;
 	}
 
 	/**
-	 * Defines where the volunteering opportunity is located
+	 * Retrieves location of the opportunity
 	 * 
 	 */
 	public String getLocation() {
 		return Location;
 	}
 
+	/**
+	 * Assigns location of the opportunity
+	 * 
+	 */
 	public void setLocation(String Location) {
 		this.Location = Location;
 	}
 
 	/**
-	 * Defines the number of volunteers requested
+	 * Retrieves the number of volunteers requested
 	 * 
 	 */
 	public int getNumberNeeded() {
 		return NumberNeeded;
 	}
 
+	/**
+	 * Assigns the number of volunteers requested
+	 * 
+	 */
 	public void setNumberNeeded(int NumberNeeded) {
 		this.NumberNeeded = NumberNeeded;
 	}
 
+	/**
+	 * Returns a string representation of the currently loaded volunteer data
+	 */
     @Override
     public String toString() {
         return "OpportunityEntity [id=" + id + ", Description=" + Description + 

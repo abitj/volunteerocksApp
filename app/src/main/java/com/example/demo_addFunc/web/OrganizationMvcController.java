@@ -1,3 +1,6 @@
+/**
+ * Implementation of the Organization controller
+ */
 package com.example.demo_addFunc.web;
 
 import java.util.List;
@@ -30,6 +33,16 @@ public class OrganizationMvcController {
 		return "list-organizations";
 	}
 
+	/**
+	 * Edits the Organizaton
+	 * <p>
+	 * Selects the organization by id then presents the values for editing
+	 * <p>
+	 * @param model
+	 * @param id id of the organization to retrieve for editing
+	 * @return add-edit-organization html resource template
+	 * @throws RecordNotFoundException
+	 */
 	@RequestMapping(path = {"/edit", "/edit/{id}"})
 	public String editOrganizationById(Model model, @PathVariable("id") Optional<Long> id) 
 							throws RecordNotFoundException 
@@ -43,6 +56,14 @@ public class OrganizationMvcController {
 		return "add-edit-organization";
 	}
 	
+	/**
+	 * Delete the organization by id
+	 * <p>
+	 * @param model
+	 * @param id unique id of the organization to delete
+	 * @return Redirects to list of organizations
+	 * @throws RecordNotFoundException
+	 */
 	@RequestMapping(path = "/delete/{id}")
 	public String deleteOrganizationById(Model model, @PathVariable("id") Long id) 
 							throws RecordNotFoundException 
@@ -51,6 +72,12 @@ public class OrganizationMvcController {
 		return "redirect:/";
 	}
 
+	/**
+	 * Create a new organization
+	 * <p>
+	 * @param opportunity
+	 * @return Redirects to list of organizations
+	 */
 	@RequestMapping(path = "/createOrganization", method = RequestMethod.POST)
 	public String createOrUpdateOrganization(OrganizationEntity organization) 
 	{
