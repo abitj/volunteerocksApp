@@ -20,8 +20,13 @@ Volunteers can search opportunities by zip code. They will then be able to view 
         A volunteer can also be edited or deleted.
         Test cases and test scripts are working for Volunteer classes.
         Test cases and test scripts are working for Organization and Opportunity classes.
-
-
+       
+**Release Notes M4(what is currently working):**
+        Added homepage where we can enter zip code and seach or create opportunity 
+        Currently added volunteers sign up button to take you to add volunteer page 
+        Fixed the bug in edit button under add voulnteer page
+        Completed pr0ject summary document
+        
 **How to run VolunteeRocks App:**
 * Go to volunteerockApp/app directory 
 * Build the server by running the command < mvn spring-boot:run >
