@@ -22,10 +22,10 @@ Volunteers can search opportunities by zip code. They will then be able to view 
         Test cases and test scripts are working for Organization and Opportunity classes.
        
 **Release Notes M4(what is currently working):**
-        Added homepage where we can enter zip code and seach or create opportunity 
-        Currently added volunteers sign up button to take you to add volunteer page 
-        Fixed the bug in edit button under add voulnteer page
-        Completed pr0ject summary document
+        Added homepage where we can enter zip code and seach or create opportunity. 
+        Currently added volunteers sign up button to take you to add volunteer page. 
+        Fixed the bug in edit button under add volunteer page.
+        Completed project summary document.
         
 **How to run VolunteeRocks App:**
 * Go to volunteerockApp/app directory 
